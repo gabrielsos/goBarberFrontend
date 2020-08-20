@@ -21,6 +21,7 @@ import logoImg from '../../assets/logo.svg';
 import { FiPower, FiClock } from 'react-icons/fi';
 import { useAuth } from '../../hooks/auth';
 import api from '../../services/api';
+import { Link } from 'react-router-dom';
 
 interface MonthAvailabilityItem {
   day: number;
@@ -123,7 +124,7 @@ const Dashboard: React.FC = () => {
 
   const nextAppointment = useMemo(() => {
     return appointments.find(appointment =>
-      isAfter(parseISO(appointment.date), new Date),
+      isAfter(parseISO(appointment.date), new Date())
     )
   }, [appointments]);
 
@@ -140,7 +141,7 @@ const Dashboard: React.FC = () => {
             />
             <div>
               <span>Bem-vindo,</span>
-              <strong>{user.name}</strong>
+              <Link to="/profile"><strong>{user.name}</strong></Link>
             </div>
           </Profile>
 
