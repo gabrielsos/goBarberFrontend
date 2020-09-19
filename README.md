@@ -1,4 +1,4 @@
-# Sexto desafio do bootcamp GoStack da Rocketseat. (Fundamentos ReactJS).
+# Aplicação desenvolvida durante o bootcamp GoStack da Rocketseat
 
 ## Para rodar a aplicação siga os seguintes procedimentos:
 
